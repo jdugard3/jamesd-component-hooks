@@ -6,6 +6,12 @@ import { useState } from "react";
 const TrafficLight = () => {
        const [selectedColor, setSelectedColor] = useState(""); 
 
+       const selectRandomColor = () => {
+            const colors = ["red", "yellow", "green"];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            setSelectedColor(randomColor);
+       }
+
     return (
         <>
             <div className="stem"></div>
@@ -23,6 +29,9 @@ const TrafficLight = () => {
                 className={
                     selectedColor === "green" ? "green selected" : "green"
                 }></div>
+            </div>
+            <div className="button">
+                <button onClick={selectRandomColor}>Click me</button>
             </div>
         </>
     );
