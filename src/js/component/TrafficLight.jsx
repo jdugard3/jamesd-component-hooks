@@ -31,7 +31,7 @@ const TrafficLight = () => {
                 }></div>
             </div>
             <div className="button">
-                <button onClick={selectRandomColor}>Click me</button>
+                <button onClick={selectRandomColor}>Red, Yellow, or Green?</button>
             </div>
         </>
     );
